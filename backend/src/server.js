@@ -13,7 +13,7 @@ const extensions = ({ context }) => {
 app.use(logger);
 app.use(cors());
 
-app.listen(8080, async () => {
+app.listen(process.env.PORT, async () => {
     console.log("server is running", 8080);
     await mongoose.connect("mongodb+srv://dbAdmin:XUyGDe3eYReTncxB@clustexforce.b2hgz.mongodb.net/creasysolutions?retryWrites=true&w=majority", {
         useNewUrlParser: true,
